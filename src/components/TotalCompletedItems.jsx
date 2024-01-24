@@ -7,8 +7,7 @@ export default function TotalCompletedItems() {
 
   return (
     <>
-      <div className="bg-slate-400"></div>
-      <div className="w-full max-w-md border-t-[1px] border-gray-700 fixed bottom-0 z-10 stats shadow-2xl">
+      <div className="bg-gradient-to-b from-[#32404e] via-80% via-[#182431] to-[#171f29] w-full max-w-md border-t-[1px] border-gray-600 fixed bottom-0 z-10 stats shadow-2xl">
         <div className="stat">
           <div className="stat-figure text-primary">
             <svg

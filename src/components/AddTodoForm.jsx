@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../features/todo/todoSlice";
+import { addTodoThunk } from "../features/todo/todoSlice";
 
 export default function AddTodoForm() {
   const dispatch = useDispatch();
@@ -11,12 +11,13 @@ export default function AddTodoForm() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo({ title: value }));
-    setValue("");
+    if (value) {
+      dispatch(addTodoThunk({ title: value }));
+    }
   };
 
   return (
-    <form className="bg-[#1D232A]" onSubmit={handleSubmit}>
+    <form className="bg-opacity-0" onSubmit={handleSubmit}>
       <input
         value={value}
         onChange={handleChange}

@@ -1,8 +1,10 @@
-# React + Vite
+# To Do List Using Redux Toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project I practiced using Redux Toolkit, both in managing states locally, and managing it by fetching state from API.
 
-Currently, two official plugins are available:
+### To test this
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. run the command `npm i` in the src/assets/api folder
+2. run the command `npm run server` in the src/assets/api folder
+3. install this project using `npm i` run this command in this project folder.
+4. run the command `npm run dev`
