@@ -13,6 +13,7 @@ export default function AddTodoForm() {
     e.preventDefault();
     if (value) {
       dispatch(addTodoThunk({ title: value }));
+      setValue("");
     }
   };
 
