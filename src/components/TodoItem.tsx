@@ -1,9 +1,10 @@
-/* eslint-disable react/prop-types */
 import { useDispatch } from "react-redux";
 import { deleteTodoThunk, markCompleteThunk } from "../features/todo/todoSlice";
+import { Todo } from "../features/todo/todoSlice";
+import { AppDispatch } from "../app/store";
 
-export default function TodoItem({ id, completed, title }) {
-  const dispatch = useDispatch();
+export default function TodoItem({ id, completed, title }: Todo) {
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleDelete = () => {
     dispatch(deleteTodoThunk({ id: id }));

@@ -1,7 +1,12 @@
 import { useSelector } from "react-redux";
+import { State } from "../features/todo/todoSlice";
+
+interface Store {
+  todos: State;
+}
 
 export default function TotalCompletedItems() {
-  const todos = useSelector((state) => state.todos.todos);
+  const todos = useSelector((store: Store) => store.todos.list);
   const numberOfTasks = [...todos].length;
   const completedTasks = [...todos].filter((todo) => todo.completed == true);
 

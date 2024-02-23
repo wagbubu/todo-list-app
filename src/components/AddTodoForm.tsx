@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodoThunk } from "../features/todo/todoSlice";
+import { AppDispatch } from "../app/store";
 
 export default function AddTodoForm() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const [value, setValue] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.value);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (value) {
       dispatch(addTodoThunk({ title: value }));
