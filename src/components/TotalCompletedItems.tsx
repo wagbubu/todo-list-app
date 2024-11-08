@@ -1,18 +1,14 @@
 import { useSelector } from "react-redux";
-import { State } from "../features/todo/todoSlice";
-
-interface Store {
-  todos: State;
-}
+import { AppState } from "../types";
 
 export default function TotalCompletedItems() {
-  const todos = useSelector((store: Store) => store.todos.list);
+  const todos = useSelector((state: AppState) => state.todos.list);
   const numberOfTasks = [...todos].length;
   const completedTasks = [...todos].filter((todo) => todo.completed == true);
 
   return (
     <>
-      <div className="bg-gradient-to-b from-[#32404e] via-80% via-[#182431] to-[#171f29] w-full max-w-md border-t-[1px] border-gray-600 fixed bottom-0 z-10 stats shadow-2xl">
+      <div className="bg-gradient-to-b from-[#32404e] via-80% via-[#182431] to-[#171f29] w-full max-w-md border-t-[1px] border-gray-600 fixed bottom-0 stats shadow-2xl">
         <div className="stat">
           <div className="stat-figure text-primary">
             <svg
