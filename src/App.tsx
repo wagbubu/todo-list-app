@@ -41,6 +41,7 @@ export default function App() {
                   brandButtonText: "white",
                   defaultButtonBackground: "#2e2e2e",
                   defaultButtonBackgroundHover: "#3e3e3e",
+                  inputText: "white",
                 },
               },
             },
